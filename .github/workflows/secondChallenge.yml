@@ -9,7 +9,7 @@ on:
 
 # Name of the artifact
 env:
-  artifact_name: "ArtifactName"
+  artifact_name: "ArtifactNameRahul"
 
 jobs:
 
@@ -23,6 +23,10 @@ jobs:
         run: echo successfully checked out
 
       # downloading the artifact
-      - uses: actions/upload-artifact
       - name: $artifact_name
+      - uses: actions/upload-artifact
+        with:
+          name: $artifact_name
+          path: ./{{ env.artifact_name }}.exe
+      
         run: echo Artifact $artifact_name uploaded.
