@@ -3,7 +3,9 @@ name: Linkedin learning second challenge
 
 # Runs on condition
 
-on: push
+on: 
+  push:
+    branches: [ main ]
 
 # Name of the artifact
 env:
@@ -22,3 +24,4 @@ jobs:
     # downloading the artifact
     - uses: actions/upload-artifact
     - name: $artifact_name
+      run: echo Artifact $artifact_name uploaded.
