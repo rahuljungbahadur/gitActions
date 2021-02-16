@@ -20,5 +20,5 @@ jobs:
     - name: checkout
 
     # downloading the artifact
-    - runs: actions/upload-artifact
+    - uses: actions/upload-artifact
     - name: $artifact_name
