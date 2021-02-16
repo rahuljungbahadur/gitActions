@@ -23,8 +23,8 @@ jobs:
         run: echo successfully checked out
 
       # downloading the artifact
+      - uses: actions/upload-artifact@v2
       - name: $artifact_name
-      - uses: actions/upload-artifact
         with:
           name: $artifact_name
           path: ./{{ env.artifact_name }}.exe
