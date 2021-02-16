@@ -27,6 +27,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: ${{ env.artifact_name }}
-          path: ./${{ env.artifact_name }}
+          path: .
       
         #run: echo Artifact $artifact_name uploaded.
