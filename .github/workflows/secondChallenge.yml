@@ -23,6 +23,6 @@ jobs:
         run: echo successfully checked out
 
       # downloading the artifact
-      - uses: actions/upload-artifact
+      - uses: actions/upload-artifact@v2
       - name: $artifact_name
         run: echo Artifact $artifact_name uploaded.
