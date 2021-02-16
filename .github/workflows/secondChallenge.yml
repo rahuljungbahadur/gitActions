@@ -1,0 +1,24 @@
+# name of the workflow
+name: Linkedin learning second challenge
+
+# Runs on condition
+
+on: push
+
+# Name of the artifact
+env:
+  artifact_name: "ArtifactName"
+
+jobs:
+
+  job1:
+    runs-on: ubuntu-latest
+
+    # Checkout the code to the host system
+    steps:
+    - uses: actions/checkout@v2
+    - name: checkout
+
+    # downloading the artifact
+    - runs: actions/upload-artifact
+    - name: $artifact_name
