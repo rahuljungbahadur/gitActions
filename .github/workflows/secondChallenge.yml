@@ -1,5 +1,5 @@
 # name of the workflow
-name: Linkedin learning second challenge
+name: secondChallenge
 
 # Runs on condition
 
@@ -18,10 +18,11 @@ jobs:
 
     # Checkout the code to the host system
     steps:
-    - uses: actions/checkout@v2
-    - name: checkout
+      - uses: actions/checkout@v2
+      - name: checkout
+        run: echo successfully checked out
 
-    # downloading the artifact
-    - uses: actions/upload-artifact
-    - name: $artifact_name
-      run: echo Artifact $artifact_name uploaded.
+      # downloading the artifact
+      - uses: actions/upload-artifact
+      - name: $artifact_name
+        run: echo Artifact $artifact_name uploaded.
